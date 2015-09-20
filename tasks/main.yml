@@ -9,6 +9,14 @@
     - virtualenvwrapper
     - virtualenvwrapper_installation
 
+- name: create workon home
+  file: >
+    path={{ virtualenvwrapper_venvs_home }}
+    state=directory
+    mode=0755
+    group={{ ansible_ssh_user }}
+    owner={{ ansible_ssh_user }}
+
 - name: set workon home (home for virtuaenvs)
   lineinfile: >
     dest={{ virtualenvwrapper_shell_rc_file }}
