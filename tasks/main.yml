@@ -1,5 +1,8 @@
 ---
-# tasks file for virtualenvwrapper
+
+- name: Install pip
+  apt: name=python-pip
+
 - name: install virtualenvwrapper
   pip: >
     name=virtualenvwrapper
@@ -65,4 +68,3 @@
   tags:
     - virtualenvwrapper
     - virtualenvwrapper_configuration
-
