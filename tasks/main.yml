@@ -10,6 +10,8 @@
     pkg:
     - libffi-dev
     - libssl-dev
+    
+- name: install pip security packages
   pip:
     name: requests[security]
 
