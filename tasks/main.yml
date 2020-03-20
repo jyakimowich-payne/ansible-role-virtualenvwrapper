@@ -5,16 +5,6 @@
     name: pip
     state: latest
 
-- name: install security packages
-  apt:
-    pkg:
-    - libffi-dev
-    - libssl-dev
-    
-- name: install pip security packages
-  pip:
-    name: requests[security]
-
 - name: install virtualenvwrapper
   pip: >
     name=virtualenvwrapper
