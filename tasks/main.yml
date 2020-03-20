@@ -20,6 +20,7 @@
     name=virtualenvwrapper
     version={{ virtualenvwrapper_version }}
     state=present
+    extra_args="--ignore-installed six"
   tags:
     - virtualenvwrapper
     - virtualenvwrapper_installation
